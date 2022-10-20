@@ -1,0 +1,42 @@
+body {
+    background-color: #eee;
+}
+
+.caja{
+    background-color: #fff;
+    padding: 4px;
+    border: 1px;
+    border-style: solid; 
+    border-color: rgb(192, 188, 188)
+    }
+
+.caja2{
+    background-color: #fff;
+    padding: 4px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-color: rgb(192, 188, 188)
+}
+
+.caja3{
+    background-color: #fff;
+    padding: 4px;
+    border: 1px;
+    border-style: solid; 
+    border-color: rgb(192, 188, 188)
+}
+
+.aceptar_button{
+    margin: 2px;
+    border-color: blue;
+    background-color: blue;
+    color:#fff;
+}
+
+.cancelar_button{
+    margin: 2px;
+    border-color: rgb(52, 52, 52);
+    background-color: rgb(52, 52, 52);
+    color:#fff
+    
+}

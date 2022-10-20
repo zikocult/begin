@@ -1,0 +1,11 @@
+body {
+    background-color: #eee;
+}
+
+#parrafo {  /* parrafo es el id que hem definit al html */
+    color: #ff0000
+}
+
+.etiqueta { /* etiqueta es la clase que hem definit al html */
+    color: rgb(51, 97, 51) /* també es pot fer colors per RGB */
+}

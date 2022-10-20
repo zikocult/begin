@@ -1,0 +1,12 @@
+body{
+    background-color: grey;
+}
+
+#invisible{
+    display: none; /*esta propiedad vuelve a todo invisible */
+}
+
+span{
+    display: block; /* con eesto span pasa a ser bloque y no inline*/
+}
+

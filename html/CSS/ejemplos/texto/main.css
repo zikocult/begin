@@ -1,0 +1,80 @@
+body{
+    background-color: grey;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: justify;
+    color:#222fff;
+    text-indent: 40px;
+    line-height: 1.7;
+    word-spacing: 10px;
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+a{
+    color:hotpink;
+    background-color: #f00;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px;
+    margin: top 25px;
+    border-radius: 4px;
+}
+
+a:visited{ /* para links ya visitados */
+    color:white;
+    text-decoration: line-through;
+}
+
+a:hover{ /* cuando nos ponemos encima con el ratón */
+    color:grey;
+    text-decoration: underline;
+    background-color: #ff0;
+}
+
+a:active{
+    color:black
+}
+
+ul{
+    list-style-type: none;
+    background-color: #eee;
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    padding-left: 0px;
+}
+
+li{
+    color:brown;
+    border-bottom: solid 1px #ddd;
+    padding: 15px;
+}
+
+table{
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse; /* se carga los separadores visuales entre columnas */
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table th{
+    background-color: #4caf50;
+    color:white;
+    text-align: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
