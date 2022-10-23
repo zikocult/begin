@@ -94,65 +94,71 @@ int main() {
   fgets(texto, 100, stdin);
   printf("%s\n", strlwr(texto));
 
-// strupr(cadena)
-// Convierte a mayúsculas todas las letras de una cadena
+  // strupr(cadena)
+  // Convierte a mayúsculas todas las letras de una cadena
 
   char texto2[100];
   printf("Escribe un texto con mayúsculas y minúsculas para convertir\n");
   fgets(texto2, 100, stdin);
   printf("%s\n", strupr(texto2));
 
-// Estas dos últimas funciones están obsoletas, con lo que debido añadir el siguiente código a string.h
+  // Estas dos últimas funciones están obsoletas, con lo que debido añadir el
+  // siguiente código a string.h Hay que incluir en <string.h> la libreria
+  // <ctype.h>
+  //
+  // #include <ctype.h>
+  //
+  // char *strlwr(char *str)
+  // {
+  //   unsigned char *p = (unsigned char *)str;
+  //   while (*p) {
+  //      *p = tolower((unsigned char)*p);
+  //       p++;
+  //   }
+  //   return str;
+  // }
 
-// char *strlwr(char *str)
-// {
-//   unsigned char *p = (unsigned char *)str;
-//   while (*p) {
-//      *p = tolower((unsigned char)*p);
-//       p++;
-//   }
-//   return str;
-// }
+  // char *strupr(char *str)
+  // {
+  //   unsigned char *p = (unsigned char *)str;
+  //   while (*p) {
+  //      *p = toupper((unsigned char)*p);
+  //       p++;
+  //   }
+  //   return str;
+  // }
 
-// char *strupr(char *str)
-// {
-//   unsigned char *p = (unsigned char *)str;
-//   while (*p) {
-//      *p = toupper((unsigned char)*p);
-//       p++;
-//   }
-//   return str;
-// }
+  // strrchr(Cadena, caracter)
+  // Regresa el restante de la cadena a partir de la primera aparición del
+  // carácter indicado
 
-// strrchr(Cadena, caracter)
-// Regresa el restante de la cadena a partir de la primera aparición del carácter indicado
+  char Abecedario[] = "abcdefghijklmnopqrstuvwxyz";
 
-char Abecedario[] = "abcdefghijklmnopqrstuvwxyz";
+  printf("Abecedario sin cortes %s ", Abecedario);
+  printf("El abecedario se cortará en la letra M %s: \n",
+         strchr(Abecedario, 'm'));
 
-printf("Abecedario sin cortes %s ", Abecedario);
-printf("El abecedario se cortará en la letra M %s: \n", strchr(Abecedario, 'm'));
+  // strrev()
+  // Invierte una cadena
 
-// strrev()
-// Invierte una cadena
+  char Hola[] = "Que te den mamon";
+  strrev(Hola);
+  printf("Cadena Invertida: %s\n", Hola);
 
-char Hola [] = "Que te den mamon";
-strrev(Hola);
-printf("Cadena Invertida: %s\n", Hola);
+  // Este también se debe incluir a manopla
+  // char *strrev(char *str)
+  // {
+  //       char *p1, *p2;
+  //       if (! str || ! *str)
+  //             return str;
+  //       for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
+  //       {
+  //             *p1 ^= *p2;
+  //             *p2 ^= *p1;
+  //             *p1 ^= *p2;
+  //       }
+  //       return str;
+  // }
 
-// Este también se debe incluir a manopla
-// char *strrev(char *str)
-// {
-//       char *p1, *p2;
-//       if (! str || ! *str)
-//             return str;
-//       for (p1 = str, p2 = str + strlen(str) - 1; p2 > p1; ++p1, --p2)
-//       {
-//             *p1 ^= *p2;
-//             *p2 ^= *p1;
-//             *p1 ^= *p2;
-//       }
-//       return str;
-// }
-
-return 0;
+  return 0;
 }
