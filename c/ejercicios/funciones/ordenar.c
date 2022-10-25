@@ -2,6 +2,18 @@
 
 #include <stdio.h>
 
+void ascendente(int a, int b, int c);
+
+int main() {
+  int a, b, c;
+  printf("Escribe tres números: ");
+  scanf("%d %d %d", &a, &b, &c);
+
+  ascendente(a, b, c);
+
+  return 0;
+}
+
 void ascendente(int a, int b, int c) {
   if (a >= b && a >= c) {
     if (b >= c) {
@@ -26,16 +38,6 @@ void ascendente(int a, int b, int c) {
       printf("%d %d %d\n", a, b, c);
     }
   }
-}
-
-int main(int argc, char *argv[]) {
-  int a, b, c;
-  printf("Escribe tres números: ");
-  scanf("%d %d %d", &a, &b, &c);
-
-  ascendente(a, b, c);
-
-  return 0;
 }
 
 // Es mejor el método de la burbuja, pero por el momento no trabajamos con
