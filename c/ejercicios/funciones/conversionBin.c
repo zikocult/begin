@@ -1,13 +1,19 @@
 #include <stdio.h>
 void conversion(int num);
+void cuentaregresiva(int numero);
 
 int main() {
-  int num;
+  int num, num2;
 
   printf("Introduzca el número a convertir\n");
   scanf("%i", &num);
 
   conversion(num);
+
+  printf("\n\nIntroduzca un número a hacer cuenta atrás\n");
+  scanf("%i", &num2);
+  cuentaregresiva(num2);
+
   return 0;
 }
 
@@ -28,4 +34,16 @@ void conversion(int num) {
     conversion(num / 2);
   }
   printf("%i", num % 2);
+}
+
+// Poso aquest exemple, doncs aquest si que va de davant enrere, la diferència
+// es quan comença a exectuar segons el primer IF que afegim
+
+void cuentaregresiva(int numero) {
+  if (numero < 0) {
+    return;
+  } else {
+    printf("%i\n", numero);
+    cuentaregresiva(numero - 1);
+  }
 }
