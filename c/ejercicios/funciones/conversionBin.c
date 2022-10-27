@@ -10,6 +10,12 @@ int main() {
 
   conversion(num);
 
+  // while (num > 1) {
+  //   printf("%i", num % 2);
+  //   num = num / 2;
+  // }
+  // printf("\n");
+
   printf("\n\nIntroduzca un número a hacer cuenta atrás\n");
   scanf("%i", &num2);
   cuentaregresiva(num2);
@@ -47,3 +53,7 @@ void cuentaregresiva(int numero) {
     cuentaregresiva(numero - 1);
   }
 }
+
+// La diferencia principal es que en el primer comença quan la condició es
+// valida i per tan torna a realitzar els passos anteriors i en la segona,
+// valida fins acabar
