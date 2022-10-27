@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-// Funciones sin retorno de valor:
+Funciones sin retorno de valor:
 
 void nombreFuncion(parametros){
     Instrucciones a realizar
 }
 
-// Funciones con retorno de valor
+Funciones con retorno de valor
 
 TipoDeDato nombreFuncion2(parametros) {
     Instrucciones a realizar")
