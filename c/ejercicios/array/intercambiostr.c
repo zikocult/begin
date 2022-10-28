@@ -17,6 +17,11 @@ int main(int argc, char *argv[]) {
   fgets(nombre2, size, stdin);
   strtok(nombre2, "\n");
 
+  for (int i = 0; i < size; i++) {
+    printf("Nombre1[%i] = %i\n", i, nombre1[i]);
+    // printf("Nombre2[%i] = %i\n", i, nombre2[i]);
+  }
+
   printf("\nNombre 1 introducido es: %s\n", nombre1);
   printf("Nombre 2 introducido es: %s\n", nombre2);
 
