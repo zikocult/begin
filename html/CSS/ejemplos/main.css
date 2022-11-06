@@ -1,19 +1,19 @@
 body {
-    background-color: #eee;
+  background-color: #eee;
 }
 
 .caja {
-    margin: 8px;
-    padding: 8px;
-    border-style: solid dotted dashed;
-    border-width: 8px;
-    border-color: #faa;
-    border-left: 16px solid #afa;
-    background-color: #aaf;
-    border-radius: 8px;
-    height: 50px;
-    width: 100px;    
-    color: #575;
+  margin: 8px;
+  padding: 8px;
+  border-style: solid dotted dashed;
+  border-width: 8px;
+  border-color: #faa;
+  border-left: 16px solid #afa;
+  background-color: #aaf;
+  border-radius: 8px;
+  height: 50px;
+  width: 100px;
+  color: #575;
 }
 
 .caballo {
@@ -21,7 +21,7 @@ body {
   padding: 8px;
 }
 
-pr{
+pr {
   color: #afa;
   background-color: #faa;
 }
