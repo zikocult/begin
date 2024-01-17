@@ -4,7 +4,7 @@ cadenaejemplo = "Hola Mundo!\n"
 print(cadenaejemplo)
 print("Cambio de linea con \\n y tabulacion con \\t")
 print(
-    "Ahora si, vamos a ver las diferentes tipos de colecciones\n\t * Listas\n\t * Tuplas\n\t * Diccionarios"
+    "Ahora si, vamos a ver las diferentes tipos de colecciones\n\t * Listas\n\t * Tuplas\n\t * Diccionarios \n"
 )
 
 ################## LISTAS #####################
@@ -20,4 +20,4 @@ listanueva = ["patata", "melocoton", "tomate"]
 listafinal = listaejemplo + listanueva
 print("Las listas se pueden sumar")
 print("listafinal = listaejemplo + listanueva")
-print (listaejemplo, "+", listanueva, "=", listafinal)
+print(listaejemplo, "+", listanueva, "=", listafinal)
