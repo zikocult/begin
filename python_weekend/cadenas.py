@@ -2,8 +2,12 @@ print("\n############## CADENAS DE TEXTO #################\n")
 
 cadenaejemplo = "Hola Mundo!"
 print(cadenaejemplo)
-print("Cambio de linea con \\n y tabulacion con \\t")
-# print("\n")
+print("Podemos acceder a las diferentes partes de la cadena como si fuera un array")
+for i in range (0, len(cadenaejemplo)):
+    print("Posición", i, " ", cadenaejemplo[i])
+
+print("\nCambio de linea con \\n y tabulacion con \\t")
+
 print(
     "\nVamos a ver las diferentes tipos de colecciones\n\t * Listas\n\t * Tuplas\n\t * Diccionarios \n"
 )
