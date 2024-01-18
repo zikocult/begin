@@ -1,10 +1,10 @@
 print("\n############## CADENAS DE TEXTO #################\n")
 
-cadenaejemplo = "Hola Mundo!"
-print(cadenaejemplo)
-print("Podemos acceder a las diferentes partes de la cadena como si fuera un array")
-for i in range (0, len(cadenaejemplo)):
-    print("Posición", i, " ", cadenaejemplo[i])
+cadena = "Ejemplo!"
+print(cadena)
+print("Podemos acceder a las diferentes partes de la cadena como si fuera un array, var[x]")
+for i in range(0, len(cadena)):
+    print("Posición", i, " ", cadena[i])
 
 print("\nCambio de linea con \\n y tabulacion con \\t")
 
@@ -14,15 +14,17 @@ print(
 
 print("################## LISTAS #####################\n")
 
-listaejemplo = ["Hola", "Mundo", "!"]
+lista = ["Hola", "Mundo", "!"]
 
-print("* Las listas se delimitan con [] -->", listaejemplo)
-print("* Con len(lista), podemos obtener el número de items =", len(listaejemplo))
+print("* Las listas se delimitan con [] -->", lista)
+print("* Con len(lista), podemos obtener el número de items =", len(lista))
 
-print("* Accedemos a los items con lista[n] inciando con el 0, p.e. -->", listaejemplo[0])
+print("* Accedemos a los items con lista[x] inciando con el 0")
+for i in range(0, len(lista)):
+    print("Posición", i, " ", lista[i])
 
 listanueva = ["patata", "melocoton", "tomate"]
-listafinal = listaejemplo + listanueva
-print("* Las listas se pueden sumar")
-print("\t- listafinal = listaejemplo + listanueva")
-print("\t-", listaejemplo, "+", listanueva, "=", listafinal)
+listafinal = lista + listanueva
+print("\n* Las listas se pueden sumar")
+print("\t- listafinal = lista + listanueva")
+print("\t-", lista, "+", listanueva, "=", listafinal)

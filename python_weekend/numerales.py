@@ -30,18 +30,21 @@ while i < repes:
 
 # Si es posa tot en una linea, no es necessari crear un auxiliar
 # Així es tindría que fer a C:
-# int main (){
-#   int i, a, b, auxiliar, repes;
-#   i, a = 0;
-#   b = 1;
-#   scanf("%i", &repes);
-#   while (i < repes)
-#   {
-#       printf ("%i ", a);
-#       auxiliar = b;
-#       b = a + b;
-#       a = auxiliar;
-#       i++;
-#   }
-#   return (0)
+# include <stdio.h>
+#
+# int main() {
+# 	int i = 0, a = 0, b = 1, auxiliar, repes;
+#
+# 	printf("Introduzca número de repeticiones: ");
+#   	scanf("%i", &repes);
+#
+#   	while (i < repes) {
+#     	    printf("%i ", a);
+#     	    auxiliar = b;
+#     	    b = a + b;
+#     	    a = auxiliar;
+#     	    i++;
+#   	}
+#   	printf("\n");
+#   	return (0);
 # }
