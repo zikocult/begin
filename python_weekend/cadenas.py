@@ -1,4 +1,4 @@
-print("############## CADENAS DE TEXTO #################\n")
+print("\n############## CADENAS DE TEXTO #################\n")
 
 cadenaejemplo = "Hola Mundo!"
 print(cadenaejemplo)
