@@ -28,11 +28,12 @@ print("Cadena[-2:] --> ", cadena[5:])
 print("Cadena[0:5] + cadena[5:8] --> ", cadena[0:5] + cadena[5:8])
 print("Cadena[:5] + cadena[5:] --> ", cadena[:5] + cadena[5:])
 print("Cadena[5:] + cadena[:5] --> ", cadena[5:] + cadena[:5])
+print("Si nos pasamos no pasa nada cadena[5:300] --> ", cadena[5:300])
 
 print("\nNo podemos modificar una parte, para eso debemos volver a crear la variable")
-print("Podríamos hacerlo con cadena = J + cadena[1:7]")
-cadena = "J" + cadena[1:7]
-print("Dando como resultado que eliminamos la parte 8 y cambiamos la 0 --> ", cadena)
+print("Podríamos hacerlo con cadena = A + cadena[1:3] + cadena [4:7]")
+cadena = "A" + cadena[1:3] + cadena[4:7]
+print("Dando como resultado que eliminamos la posicion 8, 4 y cambiamos la 0 --> ", cadena)
 
 print("\nCambio de linea con \\n y tabulacion con \\t")
 print("\nVamos a ver las diferentes tipos de colecciones\n")
