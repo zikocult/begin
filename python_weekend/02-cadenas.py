@@ -8,6 +8,7 @@ print("Como si fuera un array var[x] o un puntero i* avanzando posiciones")
 # Dos formes de fer el FOR
 # for i in range(0, len(cadena)):
 #     print(cadena[i], end=" ")
+# El end es per a que no faci un salt de linea
 for i in cadena:
     print(i, end=" ")
 
@@ -27,6 +28,11 @@ print("Cadena[-2:] --> ", cadena[5:])
 print("Cadena[0:5] + cadena[5:8] --> ", cadena[0:5] + cadena[5:8])
 print("Cadena[:5] + cadena[5:] --> ", cadena[:5] + cadena[5:])
 print("Cadena[5:] + cadena[:5] --> ", cadena[5:] + cadena[:5])
+
+print("\nNo podemos modificar una parte, para eso debemos volver a crear la variable")
+print("Podríamos hacerlo con cadena = J + cadena[1:7]")
+cadena = "J" + cadena[1:7]
+print("Dando como resultado que eliminamos la parte 8 y cambiamos la 0 --> ", cadena)
 
 print("\nCambio de linea con \\n y tabulacion con \\t")
 print("\nVamos a ver las diferentes tipos de colecciones\n")
