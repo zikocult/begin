@@ -1,8 +1,12 @@
 print("\n############## CADENAS DE TEXTO #################\n")
 
 cadena = "Ejemplo!"
-print(cadena)
-print("Podemos acceder a las diferentes partes de la cadena como si fuera un array, var[x]")
+print("Imprimiendo el contenido de la variable en su totalidad -->", cadena)
+print("También podemos acceder a las diferentes partes de la cadena como si fuera un array, var[x]")
+# i = 0
+# for i in cadena:
+#     i = i + 1
+#     print("Posición", i, " ", cadena[i])
 for i in range(0, len(cadena)):
     print("Posición", i, " ", cadena[i])
 
