@@ -16,7 +16,19 @@ print("La última posición se marca como -1 y la primera es -len(var)")
 for i in range(-1, (len(cadena) * -1) - 1, -1):
     print(cadena[i], end=" ")
 
-print("\n\nCambio de linea con \\n y tabulacion con \\t")
+print("\n\nPython ofrece la posibilidad de acceso a los carácteres sin bucles")
+print("Cadena[0:2] --> ", cadena[0:2])
+print("Cadena[2:5] --> ", cadena[2:5])
+print("Cadena[5:8] --> ", cadena[5:8])
+print("Cadena[:5] --> ", cadena[:5])
+print("Cadena[5:] --> ", cadena[5:])
+print("Cadena[:-2] --> ", cadena[:5])
+print("Cadena[-2:] --> ", cadena[5:])
+print("Cadena[0:5] + cadena[5:8] --> ", cadena[0:5] + cadena[5:8])
+print("Cadena[:5] + cadena[5:] --> ", cadena[:5] + cadena[5:])
+print("Cadena[5:] + cadena[:5] --> ", cadena[5:] + cadena[:5])
+
+print("\nCambio de linea con \\n y tabulacion con \\t")
 print("\nVamos a ver las diferentes tipos de colecciones\n")
 print("\t * Listas\n\t * Tuplas\n\t * Diccionarios \n")
 
