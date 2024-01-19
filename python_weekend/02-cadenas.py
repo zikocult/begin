@@ -1,17 +1,22 @@
 print("\n############## CADENAS DE TEXTO #################\n")
 
 cadena = "Ejemplo!"
-print("Imprimiendo el contenido de la variable en su totalidad -->", cadena)
-print("También podemos acceder a las diferentes partes de la cadena como si fuera un array, var[x]")
-# i = 0
-# for i in cadena:
-#     i = i + 1
-#     print("Posición", i, " ", cadena[i])
-for i in range(0, len(cadena)):
-    print("Posición", i, " ", cadena[i])
+print("Imprimiendo el contenido de la variable en su totalidad -->", cadena, "\n")
 
-print("\nCambio de linea con \\n y tabulacion con \\t")
+print("También podemos acceder a las diferentes partes de la cadena")
+print("Como si fuera un array var[x] o un puntero i* avanzando posiciones")
+# Dos formes de fer el FOR
+# for i in range(0, len(cadena)):
+#     print(cadena[i], end=" ")
+for i in cadena:
+    print(i, end=" ")
 
+print("\n\nPara su acceso de atrás adelante, usamos indices negativos")
+print("La última posición se marca como -1 y la primera es -len(var)")
+for i in range(-1, (len(cadena) * -1) - 1, -1):
+    print(cadena[i], end=" ")
+
+print("\n\nCambio de linea con \\n y tabulacion con \\t")
 print(
     "\nVamos a ver las diferentes tipos de colecciones\n\t * Listas\n\t * Tuplas\n\t * Diccionarios \n"
 )
