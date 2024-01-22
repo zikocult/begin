@@ -26,17 +26,17 @@ void fibo_sec(int repes) {
 
 int main(int argc, char **argv) {
   if (argc == 2 && atoi(argv[1]) > 0) {
-    printf("En este caso lo haré de forma secuencial\n\n");
-    fibo_sec(atoi(argv[1]));
+		printf("En este caso lo haré de forma secuencial\n\n");
+		fibo_sec(atoi(argv[1]));
   } else if (argc < 2) {
-    printf("Sin parámetros introducidos\n");
+		printf("Sin parámetros introducidos\n");
   } else if (atoi(argv[1]) <= 0) {
-    printf("Sin argumento válido de entrada\n");
+		printf("Sin argumento válido de entrada\n");
   } else {
-    printf("Se recoge el primer parámetro y se desechan el resto\n");
-    printf("Lo haremos de forma recursiva\n\n");
-    for (int i = 0; i < atoi(argv[1]); i++) {
-      printf("%i - %i\n", i, fibo_rec(i));
+		printf("Se recoge el primer parámetro y se desechan el resto\n");
+		printf("Lo haremos de forma recursiva\n\n");
+		for (int i = 0; i < atoi(argv[1]); i++) {
+		printf("%i - %i\n", i, fibo_rec(i));
     }
   }
   return (0);
