@@ -14,7 +14,7 @@ for i in cadena:
 
 print("\n\nPara su acceso de atrás adelante, usamos indices negativos")
 print("La última posición se marca como -1 y la primera es -len(var)")
-for i in range(-1, (len(cadena) * -1) - 1, -1):
+for i in range(-1, (-len(cadena)) - 1, -1):
     print(cadena[i], end=" ")
 
 print("\n\nPython ofrece la posibilidad de acceso a los carácteres sin bucles")
