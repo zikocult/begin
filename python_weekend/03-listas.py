@@ -1,4 +1,4 @@
-print("################## LISTAS #####################\n")
+print("################## LISTAS [] #####################\n")
 
 lista = ["Hola", "Mundo", "!"]
 cuadrados = [1, 4, 9, 16, 25, 36]
@@ -44,7 +44,7 @@ print("\t\t- nido[0][1] = ", nido[0][1])
 print("\t\t- nido[1][1] = ", nido[1][1])
 print("\t\t- nido[0] = ", nido[0])
 
-print("\n############## TUPLAS #################\n")
+print("\n############## TUPLAS () #################\n")
 print("Las tuplas son listas, pero se definen entre () y NO son modificables")
 tupla = (1, 2, 3, 4, 5)
 print("Sólo podemos acceder al contenido como hemos hecho anteriormente")
@@ -53,7 +53,7 @@ print("\t* tupla[3:] --> ", tupla[3:])
 print("\t* tupla[2:4] --> ", tupla[1:4])
 print("\t* opción len --> ", len(tupla))
 
-print("\n############## DICCIONARIOS #################\n")
+print("\n############## DICCIONARIOS {} #################\n")
 print("Los diccionarios son colecciones de clave y valor asociado")
 print("Se definen mediante {}")
 meses = {
@@ -66,4 +66,3 @@ meses = {
 }
 print("Si accedemos a meses[Enero] (entre comillas el valor), mostrará su par", meses["Enero"])
 print("Si accedemos a meses[Marzo], mostrará su par", meses["Marzo"])
-
