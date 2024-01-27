@@ -6,7 +6,7 @@
 /*   By: ZikoCult <ZikoCult>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:16:48 by ZikoCult          #+#    #+#             */
-/*   Updated: 2024/01/24 14:22:35 by ZikoCult         ###   ########.fr       */
+/*   Updated: 2024/01/27 16:56:19 by ZikoCult         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,14 @@ int	fibo_rec(int repes)
 		return (fibo_rec(repes - 1) + fibo_rec(repes - 2));
 }
 
-void	fibo_sec(int repes)
+void	fibo_sec(int repes, int i)
 {
 	long	a;
 	long	b;
 	long	auxiliar;
-	int		i;
 
 	a = 0;
 	b = 1;
-	i = 0;
 	while (i < repes)
 	{
 		printf("%i - %li\n", i, a);
@@ -58,11 +56,11 @@ int	main(int argc, char *argv[])
 		if (argc == 2)
 		{
 			printf("En este caso lo haré de forma secuencial\n\n");
-			fibo_sec(repes);
+			fibo_sec(repes, 0);
 		}
 		else if (argc > 2)
 		{
-			printf("Se recoge el primer parámetro y se desecha el resto\n");
+			printf("Se recoge el primer parámetro y se desecha el resto\n\n");
 			while (++i < repes)
 				printf("%i - %i\n", i, fibo_rec(i));
 		}
