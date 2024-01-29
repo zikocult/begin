@@ -6,22 +6,20 @@
 /*   By: ZikoCult <ZikoCult>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:24:21 by ZikoCult          #+#    #+#             */
-/*   Updated: 2024/01/24 14:33:30 by ZikoCult         ###   ########.fr       */
+/*   Updated: 2024/01/29 08:01:53 by ZikoCult         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	fibo(int repes)
+void	fibo(int repes, int i)
 {
 	long	a;
 	long	b;
 	long	auxiliar;
-	int		i;
 
 	a = 0;
 	b = 1;
-	i = 0;
 	while (i < repes)
 	{
 		printf("%i - %li\n", i, a);
@@ -38,6 +36,6 @@ int	main(void)
 
 	printf("Introduzca número de repeticiones: ");
 	scanf("%i", &repes);
-	fibo (repes);
+	fibo (repes, 0);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ZikoCult <ZikoCult>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:16:48 by ZikoCult          #+#    #+#             */
-/*   Updated: 2024/01/29 07:59:34 by ZikoCult         ###   ########.fr       */
+/*   Updated: 2024/01/29 08:02:47 by ZikoCult         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ void	fibo_sec(int repes, int i)
 		a = auxiliar;
 		i++;
 	}
-	printf("\n");
 }
 
 int	main(int argc, char *argv[])
