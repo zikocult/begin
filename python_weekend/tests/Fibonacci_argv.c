@@ -6,13 +6,14 @@
 /*   By: ZikoCult <ZikoCult>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:16:48 by ZikoCult          #+#    #+#             */
-/*   Updated: 2024/01/27 16:56:19 by ZikoCult         ###   ########.fr       */
+/*   Updated: 2024/01/29 07:59:34 by ZikoCult         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
+// Faré la proba amb una funció recursiva i una altre secuencial
 int	fibo_rec(int repes)
 {
 	if (repes < 0)
@@ -54,16 +55,10 @@ int	main(int argc, char *argv[])
 	if (repes > 0)
 	{
 		if (argc == 2)
-		{
-			printf("En este caso lo haré de forma secuencial\n\n");
 			fibo_sec(repes, 0);
-		}
 		else if (argc > 2)
-		{
-			printf("Se recoge el primer parámetro y se desecha el resto\n\n");
 			while (++i < repes)
 				printf("%i - %i\n", i, fibo_rec(i));
-		}
 	}
 	else
 		printf("Parametros introducidos incorrectos\n");
