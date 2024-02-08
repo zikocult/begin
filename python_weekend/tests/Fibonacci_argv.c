@@ -6,14 +6,13 @@
 /*   By: ZikoCult <ZikoCult>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:16:48 by ZikoCult          #+#    #+#             */
-/*   Updated: 2024/01/29 08:02:47 by ZikoCult         ###   ########.fr       */
+/*   Updated: 2024/02/08 20:34:16 by ZikoCult         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-// Faré la proba amb una funció recursiva i una altre secuencial
 int	fibo_rec(int repes)
 {
 	if (repes < 0)
