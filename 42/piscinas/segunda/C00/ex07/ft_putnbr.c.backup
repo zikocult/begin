@@ -1,0 +1,77 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gbaruls- <gbaruls-@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/20 16:31:50 by gbaruls-          #+#    #+#             */
+/*   Updated: 2024/03/25 18:20:20 by gbaruls-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int	ft_negative(int nb)
+{
+	if (nb == -2147483648)
+	{
+		ft_putchar('-');
+		ft_putchar('2');
+		nb = 147483648;
+	}
+	if (nb < 0)
+	{
+		nb *= -1;
+		ft_putchar('-');
+	}
+	return (nb);
+}
+
+int	ft_poten(int nb)
+{
+	int	poten;
+
+	poten = 1;
+	while ((nb / 10) > 0)
+	{
+		nb = nb / 10;
+		poten = poten * 10;
+	}
+	return (poten);
+}
+
+void	ft_putnbr(int nb)
+{
+	int	poten;
+
+	nb = ft_negative(nb);
+	poten = ft_poten(nb);
+	while (nb >= 10)
+	{
+		ft_putchar((nb / poten) + '0');
+		nb = nb % poten;
+		poten = poten / 10;
+	}
+	ft_putchar(nb + '0');
+}
+
+/*int main(){
+	ft_putnbr(-2147483648);
+	ft_putchar('\n');
+	ft_putnbr(2147483647);
+	ft_putchar('\n');
+	ft_putnbr(-352);
+	ft_putchar('\n');
+	ft_putnbr(0);
+	ft_putchar('\n');
+	ft_putnbr(32569);
+	ft_putchar('\n');
+	ft_putnbr(42);
+	ft_putchar('\n');
+}*/

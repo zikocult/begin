@@ -1,0 +1,61 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_double_pointer.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gbaruls- <gbaruls-@student.42barcelona.co  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/07 15:32:14 by gbaruls-          #+#    #+#             */
+/*   Updated: 2024/04/07 16:42:41 by gbaruls-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../rush.h"
+#include <stdio.h>
+
+char	*ft_strndup(char *num)
+{
+	int		i;
+	char	*str;
+	int		count;
+	int		n;
+
+	i = 0;
+	count = 0;
+	n = 0;
+	while (num[count] != ':')
+		count++;
+	n = count;
+	while (num[n] != '\n')
+		n++;
+	if (count == 0)
+		return (NULL);
+	str = (char *)malloc(sizeof(char) * (n + 1));
+	if (str == 0)
+		return (NULL);
+	while (num[i] != '\n')
+		str[i++] = num[count++];
+	str[i] = '\0';
+	return (str);
+}
+
+char	**ft_double_pointer(char *buff)
+{
+	int		i;
+	char	**numbers;
+
+	i = 0;
+	printf("%s %i\n", "patata", ft_count_lines(buff));
+	numbers = (char **)malloc((sizeof(char) * ft_count_lines(buff)) + 1);
+	if (!numbers)
+		return (NULL);
+	printf("%s\n", "patata");
+	while (i < ft_count_lines(buff))
+	{
+		numbers[i] = ft_strndup(buff);
+		while (*buff != '\n' || *buff != '\0')
+			buff++;
+		i++;
+	}
+	return (numbers);
+}

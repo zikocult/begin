@@ -1,0 +1,112 @@
+https://hackxcrack.net/foro/c/retos-c/
+
+1-Un programa que cuente los caracteres que tiene un texto previamente introducido por el usuario (parece más fácil de lo que es)
+
+ejemplo de entrada: "ho la" ejemplo salida:el texto tiene 5 caracteres
+
+1 punto
+____________________________________
+
+2- Crear programa que lea el contenido de un archivo de texto.
+
+2 puntos
+________________________________
+3- Un programa que diga el numero mas grande. El usuario ha de insertar 4 numeros separados por un espacio.
+
+3 puntos
+
+________________________________
+
+4- Un programa que muestre la palabra mas pequeña en el orden alfabético. El usuario insertara 4 palabras
+
+40 puntos
+
+__________________________
+
+5- Un creador de diccionarios para fuerza bruta
+
+50 puntos
+
+____________________________
+
+6- Un programa que te apague el pc manera larga. (el programa tendra que ir haciendo los clicks como si fuera una persona)
+
+60 puntos
+
+__________________________
+
+7- Un programa que te de una lista de los procesos prescindibles que mas consumen.
+
+70 puntos
+
+__________________________
+
+8- Un crackeador de md5 ( a partir de un hash buscar una palabra que tenga el mismo hash).
+
+80 puntos
+
+
+__________________________
+
+9- Un programa que corra en background y cambie el nombre de todas las ventanas que se llamen "hola" a "adios" .
+
+75 puntos
+
+__________________________
+
+10- Un programa que escriba al revés las palabras. .
+
+Entrada: hola
+Salida: aloh
+
+
+
+15 puntos
+__________________________
+
+11- Un programa que al introducirle tu data de nacimiento te diga los días, meses y semanas que faltan para tu próximo cumpleaños 
+
+20 puntos
+
+__________________________
+
+12- Un programa que haga diversos rombos de 2 * n -1 lineas como en el siguiente ejemplo 
+
+Entrada: 4
+SAlida:   
+    *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+
+25 puntos
+
+
+__________________________
+
+13- Un programa que haga lo siguiente:  decidir si lo que se le ha dado realmente es un sudoku (comprobar que realmente tenga una unica solucion y tenga el tamaño correcto) ((idea de do-while)) 
+
+35p
+
+PD:El formato del sudoku puede ser cualquiera siempre y cuando el progrma permita al user ingresar el sudoku por algún lado ,que no sea el codigo fuente.
+
+__________________________
+
+14- Un programa que genere 15200 numeros aleatorios y diga el número más grande que ha generado. 
+
+11p
+
+__________________________
+
+15- Un programa que haga la serie de Fibonacci ( el programa tiene que imprimir por pantalla hasta el numero 30 en la serie de Fibonacci).  + INFO SOBRE LA SERIE:http://es.wikipedia.org/wiki/N%C3%BAmero_de_Fibonacci
+
+11p
+
+__________________________
+
+15-(Similar al anterior)Crear un programa que obtenga el numero fi a partir de la serie de Fibonacci (el bucle tiene que tener un minimo de 30 ciclos) .
+
+15p

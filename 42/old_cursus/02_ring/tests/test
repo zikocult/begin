@@ -1,0 +1,20 @@
+
+## Test
+
+SRC_DIR_TEMP		= src/
+OBJ_DIR_TEMP		= obj/
+
+SRCS_FILES_TEMP		= $(shell find libft -type f -iname "*.c" | sed 's#[.][^.]*$$##')
+SRCDIRS_TEMP		= $(shell find libft -type d)
+
+OBJSDIRS_TEMP	= $(patsubst $(SRC_DIR_TEMP)%,$(OBJ_DIR_TEMP)%,$(SRCDIRS_TEMP))
+OBJSTEMP_TEMP	= $(patsubst $(SRC_DIR_TEMP)%,$(OBJ_DIR_TEMP)%,$(SRCS_FILES_TEMP))
+OBJS_TEMP		= $(addsuffix .o, $(OBJSTEMP_TEMP))
+SRCS_TEMP		= $(addsuffix .c, $(SRCS_FILES_TEMP))
+
+	$(info $(SRCS_FILES_TEMP))
+	$(info $(SRCDIRS_TEMP))
+	$(info $(OBJSDIRS_TEMP))
+	$(info $(OBJSTEMP_TEMP))
+	$(info $(OBJS_TEMP))
+	$(info $(SRCS_TEMP))

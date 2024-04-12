@@ -1,0 +1,69 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gbarulls <gbarulls@student.42barcelona.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/03/30 19:56:59 by gbarulls          #+#    #+#              #
+#    Updated: 2023/05/13 18:42:06 by gbarulls         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME		= libftprintf.a
+LIBS		= include/ft_printf.h include/libft.h
+
+SRC_DIR		=	src/
+OBJ_DIR		=	obj/
+LIBFT_DIR	=	libft/
+
+SRCS_FILES	=	$(shell find src/ -type f -iname "*.c" | sed 's#[.][^.]*$$##')
+
+SRCS 		= $(addsuffix .c, $(SRCS_FILES))
+SRCDIRS		= $(shell find src/ -type d)
+OBJSDIRS	= $(patsubst $(SRC_DIR)%,$(OBJ_DIR)%,$(SRCDIRS))
+OBJSTEMP	= $(patsubst $(SRC_DIR)%,$(OBJ_DIR)%,$(SRCS_FILES))
+OBJS		= $(addsuffix .o, $(OBJSTEMP))
+
+CC			= gcc
+CFLAGS		= -Wall -Wextra -Werror
+AR			= ar rcs
+RANLIB		= ranlib
+RM			= rm -rf
+MKDIR		= mkdir -p
+
+all:		$(NAME)
+
+$(NAME):	$(OBJSDIRS) $(OBJS)
+			make -C $(LIBFT_DIR)
+			cp $(LIBFT_DIR)libft.a $(NAME)
+			$(AR) $(NAME) $(OBJS)
+			$(RANLIB) $(NAME)
+
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(LIBS) Makefile
+			$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJSDIRS) :
+	$(MKDIR) $(OBJSDIRS)
+
+clean:
+			$(RM) $(OBJS)
+			@make clean -C $(LIBFT_DIR)
+
+fclean:		clean
+			$(RM) $(OBJSDIRS)
+			$(RM) $(NAME)
+			@make fclean -C $(LIBFT_DIR)
+
+re:			fclean $(NAME)
+			@make re -C $(LIBFT_DIR)
+
+normi:
+	@norminette $(SRCS) $(LIBS)
+	@make normi -C $(LIBFT_DIR)
+
+info:
+	$(info $(SRCS))
+	$(info $(OBJS))
+
+.PHONY:		all clean fclean re info normi

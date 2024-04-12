@@ -1,0 +1,5 @@
+a.out
+*.swp
+*.old
+.DS_Store
+main.c

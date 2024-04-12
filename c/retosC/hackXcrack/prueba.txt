@@ -1,0 +1,7 @@
+Hola mundo que tal
+
+Esto es un archivo de prueba
+Vamos a leer e imprir este archivo
+
+
+Dale compadre!
