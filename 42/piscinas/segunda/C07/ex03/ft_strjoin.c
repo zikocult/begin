@@ -6,11 +6,11 @@
 /*   By: gbaruls- <gbaruls-@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 11:20:46 by gbaruls-          #+#    #+#             */
-/*   Updated: 2024/04/02 16:37:33 by gbaruls-         ###   ########.fr       */
+/*   Updated: 2024/04/14 23:20:13 by ZikoCult         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* #include <stdio.h> */
+#include <stdio.h>
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
@@ -70,16 +70,16 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	return (mal);
 }
 
-/* int	main(void) */
-/* { */
-/* 	char	*tab[4]; */
-/* 	tab[0] = "Potato"; */
-/* 	tab[1] = "Guindilla"; */
-/* 	tab[2] = "Chanchito"; */
-/* 	tab[3] = "Malo"; */
-/* 	char	*test; */
-/* 	test = ft_strjoin(4, tab, " / "); */
-/* 	printf("%s\n", test); */
-/* 	free(test); */
-/* 	return (0); */
-/* } */
+int	main(void)
+{ 
+	char	*tab[4];
+	tab[0] = "Potato";
+	tab[1] = "Guindilla";
+	tab[2] = "Chanchito";
+	tab[3] = "Malo";
+	char	*test;
+	test = ft_strjoin(4, tab, " / ");
+	printf("%s\n", test);
+	free(test);
+	return (0);
+}
