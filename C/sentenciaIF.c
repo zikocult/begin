@@ -1,9 +1,12 @@
 #include <stdio.h>
 
+//TODO: revisar el printf
+//FIXME: arreglar las diferentes variables
+
 int main(int argc, char *argv[]) {
   float a, b;
   printf("Introduzca dos números a analizar si su suma es mayor, menor o igual "
-         "a 5\n");
+      "a 5\n");
   scanf("%f %f", &a, &b);
 
   if (a + b == 5) {
