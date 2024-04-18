@@ -1,4 +1,4 @@
-# The developer born
+# The born
 
 My first steps as a developer, actually I'm only using this repository as a documentation. Very useful sometimes.
 
