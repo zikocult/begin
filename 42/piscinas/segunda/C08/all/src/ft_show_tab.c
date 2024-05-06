@@ -6,11 +6,11 @@
 /*   By: gbaruls- <gbaruls-@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 10:54:44 by gbaruls-          #+#    #+#             */
-/*   Updated: 2024/04/04 11:11:56 by gbaruls-         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:10:35 by ZikoCult         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stock_str.h"
+#include <ft_stock_str.h>
 
 void	ft_putchar(char c)
 {

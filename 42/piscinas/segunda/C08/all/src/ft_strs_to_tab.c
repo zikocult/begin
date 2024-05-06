@@ -6,12 +6,11 @@
 /*   By: gbaruls- <gbaruls-@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 17:15:56 by gbaruls-          #+#    #+#             */
-/*   Updated: 2024/04/04 15:09:13 by gbaruls-         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:10:22 by ZikoCult         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "ft_stock_str.h"
+#include <ft_stock_str.h>
 
 int	ft_strlen(char *str)
 {
