@@ -6,11 +6,12 @@
 /*   By: gbarulls <gbarulls@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:59:19 by gbarulls          #+#    #+#             */
-/*   Updated: 2023/03/31 00:58:20 by gbarulls         ###   ########.fr       */
+/*   Updated: 2024/06/17 17:08:42 by Guillem Barulls  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+#include <stdio.h>
 
 static char	*ft_strndup(const char *s, int n)
 {

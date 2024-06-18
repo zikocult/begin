@@ -58,4 +58,8 @@ normi:
 info:
 	$(info $(SRCS_FILES))
 
-.PHONY:		all clean fclean re info normi
+so:
+	$(CC) -fPIC $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so $(OBJ)
+
+.PHONY:		all clean fclean re info normi so
