@@ -6,11 +6,11 @@
 /*   By: gbarulls <gbarulls@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 00:01:43 by gbarulls          #+#    #+#             */
-/*   Updated: 2023/05/27 00:45:59 by gbarulls         ###   ########.fr       */
+/*   Updated: 2024/06/22 17:01:15 by Guillem Barulls  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
+#include "../include/ft_printf.h"
 
 void	ft_nbr_pf(int number, int *count)
 {

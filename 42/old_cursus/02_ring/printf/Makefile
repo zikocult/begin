@@ -33,7 +33,7 @@ INCLUDE_DIR	= ./include/
 ## Commands
 
 CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror -I$(INCLUDE_DIR)
+CFLAGS		= -Wall -Wextra -Werror
 AR			= ar rcs
 RANLIB		= ranlib
 RM			= rm -rf

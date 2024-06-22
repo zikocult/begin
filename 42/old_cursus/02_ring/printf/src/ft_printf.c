@@ -6,11 +6,11 @@
 /*   By: gbarulls <gbarulls@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 20:36:09 by gbarulls          #+#    #+#             */
-/*   Updated: 2023/05/26 21:22:09 by gbarulls         ###   ########.fr       */
+/*   Updated: 2024/06/22 17:01:53 by Guillem Barulls  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_printf.h>
+#include "../include/ft_printf.h"
 
 void ft_case_pf(va_list args, const char format, int *count) {
   if (format == 'c')

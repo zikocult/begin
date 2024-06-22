@@ -6,7 +6,7 @@
 /*   By: gbarulls <gbarulls@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:59:19 by gbarulls          #+#    #+#             */
-/*   Updated: 2024/06/17 17:08:42 by Guillem Barulls  ###   ########.fr       */
+/*   Updated: 2024/06/19 22:09:46 by Guillem Barulls  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
