@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   7-removingelemen.c                                 :+:      :+:    :+:   */
+/*   9-loopslist.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbaruls- <gbaruls->                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 12:29:17 by gbaruls-          #+#    #+#             */
-/*   Updated: 2024/07/24 23:37:30 by Guillem Barulls  ###   ########.fr       */
+/*   Updated: 2024/07/25 00:14:52 by Guillem Barulls  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,33 +26,26 @@ void insert_begin(t_node** root, int value);
 void insert_after(t_node* node, int value);
 void insert_sorted(t_node** root, int value);
 void insert_inv_sort(t_node** root, int value);
+void remove_element(t_node** root, int value);
+void reverse(t_node** root);
 
-void remove_element(t_node** root, int value)
+// queremos detectar bucles en la lista
+
+int detect_loop(t_node* root)
 {
-	t_node* curr;
-	t_node* to_remove;
+	t_node* slow;
+	t_node* fast;
 
-	if (!*root )
-		return ;
-	if ((*root)->x == value)
+	slow = root;
+	fast = root;
+	while (slow && fast && fast->next)
 	{
-		to_remove = *root;
-		*root = (*root)->next;
-		free(to_remove);
-		return ;
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
+			return (1);
 	}
-	curr = *root;
-	while (curr->next != NULL) 
-	{
-		if (curr->next->x == value)
-		{
-			to_remove = curr->next;
-			curr->next = curr->next->next;
-			free(to_remove);
-			return ;
-		}
-		curr = curr->next;
-	}
+	return (0);
 }
 
 int main(int argc, char *argv[])
@@ -61,22 +54,27 @@ int main(int argc, char *argv[])
 	t_node* curr;
 
 	root = NULL;
+	insert_end(&root, 1);
 	insert_end(&root, 2);
-	insert_end(&root, 4);
+	insert_end(&root, 3);
 	insert_end(&root, 6);
-	insert_end(&root, 10);
-	insert_sorted(&root, 8);
-	remove_element(&root, 2);
-	remove_element(&root, 10);
+	insert_end(&root, 7);
 
+	root->next->next->next->next->next = root->next;
 
+	if (detect_loop(root) == 1)
+	{
+		printf("Loop detected\n");
+		return (1);
+	}
+	else
+		printf("No loop detected\n");
 	curr = root;
 	while (curr != NULL) 
 	{
 		printf("%d\n", curr->x);
 		curr = curr->next;
 	}
-
 	deallocate(&root);	
 	return (0);
 }
@@ -104,6 +102,24 @@ void insert_end(t_node** root, int value)
 		curr = curr->next;
 	}
 	curr->next = new_node;
+}
+
+void reverse(t_node** root)
+{
+	t_node* prev;
+	t_node* curr;
+	t_node* next;
+
+	prev = NULL;
+	curr = *root;
+	while (curr != NULL)
+	{
+		next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
+	}
+	*root = prev;
 }
 
 void insert_begin(t_node** root, int value)
@@ -191,4 +207,32 @@ void insert_inv_sort(t_node** root, int value)
 		curr = curr->next;
 	}
 	insert_after(curr, value);
+}
+
+void remove_element(t_node** root, int value)
+{
+	t_node* curr;
+	t_node* to_remove;
+
+	if (!*root )
+		return ;
+	if ((*root)->x == value)
+	{
+		to_remove = *root;
+		*root = (*root)->next;
+		free(to_remove);
+		return ;
+	}
+	curr = *root;
+	while (curr->next != NULL) 
+	{
+		if (curr->next->x == value)
+		{
+			to_remove = curr->next;
+			curr->next = curr->next->next;
+			free(to_remove);
+			return ;
+		}
+		curr = curr->next;
+	}
 }

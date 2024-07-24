@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   7-removingelemen.c                                 :+:      :+:    :+:   */
+/*   8-reversinglists.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbaruls- <gbaruls->                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 12:29:17 by gbaruls-          #+#    #+#             */
-/*   Updated: 2024/07/24 23:37:30 by Guillem Barulls  ###   ########.fr       */
+/*   Updated: 2024/07/24 23:49:52 by Guillem Barulls  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,33 +26,24 @@ void insert_begin(t_node** root, int value);
 void insert_after(t_node* node, int value);
 void insert_sorted(t_node** root, int value);
 void insert_inv_sort(t_node** root, int value);
+void remove_element(t_node** root, int value);
 
-void remove_element(t_node** root, int value)
+void reverse(t_node** root)
 {
+	t_node* prev;
 	t_node* curr;
-	t_node* to_remove;
+	t_node* next;
 
-	if (!*root )
-		return ;
-	if ((*root)->x == value)
-	{
-		to_remove = *root;
-		*root = (*root)->next;
-		free(to_remove);
-		return ;
-	}
+	prev = NULL;
 	curr = *root;
-	while (curr->next != NULL) 
+	while (curr != NULL)
 	{
-		if (curr->next->x == value)
-		{
-			to_remove = curr->next;
-			curr->next = curr->next->next;
-			free(to_remove);
-			return ;
-		}
-		curr = curr->next;
+		next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
 	}
+	*root = prev;
 }
 
 int main(int argc, char *argv[])
@@ -61,14 +52,13 @@ int main(int argc, char *argv[])
 	t_node* curr;
 
 	root = NULL;
-	insert_end(&root, 2);
-	insert_end(&root, 4);
+	insert_end(&root, 1);
+	insert_end(&root, 3);
 	insert_end(&root, 6);
-	insert_end(&root, 10);
-	insert_sorted(&root, 8);
-	remove_element(&root, 2);
-	remove_element(&root, 10);
+	insert_end(&root, 8);
+	insert_sorted(&root, 4);
 
+	reverse(&root);
 
 	curr = root;
 	while (curr != NULL) 
@@ -192,3 +182,32 @@ void insert_inv_sort(t_node** root, int value)
 	}
 	insert_after(curr, value);
 }
+
+void remove_element(t_node** root, int value)
+{
+	t_node* curr;
+	t_node* to_remove;
+
+	if (!*root )
+		return ;
+	if ((*root)->x == value)
+	{
+		to_remove = *root;
+		*root = (*root)->next;
+		free(to_remove);
+		return ;
+	}
+	curr = *root;
+	while (curr->next != NULL) 
+	{
+		if (curr->next->x == value)
+		{
+			to_remove = curr->next;
+			curr->next = curr->next->next;
+			free(to_remove);
+			return ;
+		}
+		curr = curr->next;
+	}
+}
+
