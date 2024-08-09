@@ -6,11 +6,12 @@
 /*   By: gbarulls <gbarulls@student.42barcelona.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 19:08:52 by gbarulls          #+#    #+#             */
-/*   Updated: 2023/03/31 00:57:30 by gbarulls         ###   ########.fr       */
+/*   Updated: 2024/06/15 15:03:24 by Guillem Barulls  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+#include <stdio.h>
 
 static int	ft_char_set(char c, char const *set)
 {
@@ -49,22 +50,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-// int main(void)
-// {
-// 	char *str;
-// 	// char *str2;
-// 	// char *str3;
-// 	char frase1[100] = "    Hola Mundo abcdefiou";
-// 	char frase2[100] = "Vamos a ver\t";
-// 	char frase3[100] = "kakkkkHabia una vez un barco en la Selvakkka";
-// 	str = ft_strtrim(frase1, " ");
-// 	printf("%s\n", str);
-// 	free (str);
-// 	str = ft_strtrim(frase2, "\t");
-// 	printf("%s\n", str);
-// 	free(str);
-// 	str = ft_strtrim(frase3, "kaH");
-// 	printf("%s\n", str);
-// 	free(str);
-// 	return (0);
-// }
+int main(void)
+{
+	char *str;
+	// char *str2;
+	// char *str3;
+	char frase1[100] = "    Hola Mundo abcdefiou";
+	char frase2[100] = "Vamos a ver\t";
+	char frase3[100] = "kakkkkHabia una vez un barco en la Selvakkka";
+	str = ft_strtrim(frase1, " ");
+	printf("%s\n", str);
+	free (str);
+	str = ft_strtrim(frase2, "\t");
+	printf("%s\n", str);
+	free(str);
+	str = ft_strtrim(frase3, "kaH");
+	printf("%s\n", str);
+	free(str);
+	return (0);
+}
