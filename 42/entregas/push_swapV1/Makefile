@@ -34,37 +34,39 @@ OBJSDIRS	= $(patsubst $(SRC_DIR)%,$(OBJ_DIR)%,$(SRCDIRS))
 OBJSTEMP	= $(patsubst $(SRC_DIR)%,$(OBJ_DIR)%,$(SRCS_FILES))
 OBJS		= $(addsuffix .o, $(OBJSTEMP))
 
-CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror -I$(LIBFTINC) -g
-RM			= @rm -rf
+CC			= cc
+CFLAGS		= -Wall -Wextra -Werror
+RM			= rm -rf
 MKDIR		= @mkdir -p
 NORM		= @norminette
 MAKE_LIB	= ar -rcs
 
-all:		$(NAME)
+.PHONY:		all clean fclean re info normi bonus re_bonus libft library
 
-$(NAME):	$(LIBFT) $(OBJSDIRS) $(OBJS) $(LIBRARY) Makefile
+all:		libft $(NAME)
+
+$(NAME):	$(LIBFT) $(OBJSDIRS) $(OBJS)
 			$(CC) $(CFLAGS) $(OBJS) $(LIBFT) -o $(NAME)
-
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(LIBS) Makefile
-			$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJSDIRS) :
 			$(MKDIR) $(OBJSDIRS)
 
-$(LIBFT) :	
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(LIBS) Makefile
+			$(CC) $(CFLAGS) -c $< -o $@
+
+libft:
 			make -C ./libft
 
-$(LIBRARY) : $(OBJS)
-			$(MAKE_LIB) $(LIBRARY) $^
+library:    libft $(NAME) $(LIBRARY)
+
+$(LIBRARY):	$(LIBFT) $(OBJSDIRS) $(OBJS)
+			$(MAKE_LIB) $(LIBRARY) $(OBJS)
+			ranlib $(LIBRARY)
 
 bonus:		
 			make -C ./bonus
 
-re_bonus: fclean bonus
-
-lib :		
-			make -C ./libft
+re_bonus:	fclean bonus
 
 clean:
 			$(RM) $(OBJS)
@@ -78,7 +80,7 @@ fclean:
 			make fclean -C ./libft
 			make fclean -C ./bonus
 
-re:			fclean $(NAME)
+re:			fclean all
 
 normi:
 			$(NORM) $(SRCS)
@@ -87,5 +89,3 @@ normi:
 
 info:
 			$(info $(SRCS_FILES))
-
-.PHONY:		all clean fclean re info normi lib bonus re_bonus

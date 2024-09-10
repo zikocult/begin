@@ -6,7 +6,7 @@
 ##   By: Guillem Barulls <Guillem Barulls>          +#+  +:+       +#+        ##
 ##                                                +#+#+#+#+#+   +#+           ##
 ##   Created: 2024/08/30 12:50:46 by Guillem Barulls   #+#    #+#             ##
-##   Updated: 2024/09/05 00:47:11 by Guillem Barulls  ###   ########.fr       ##
+##   Updated: 2024/09/09 23:51:43 by Guillem Barulls  ###   ########.fr       ##
 ##                                                                            ##
 ## ########################################################################## ##
 
@@ -21,21 +21,23 @@ OBJ_DIR		= obj/
 SRCS_FILES	= checker.c
 OBJS		= checker.o
 
-CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror -g
-RM			= @rm -rf
+CC			= cc
+CFLAGS		= -Wall -Wextra -Werror
+RM			= rm -rf
 NORM		= @norminette
 
-all:		$(NAME)
+.PHONY:		all clean fclean re normi push_swap libft
 
-$(NAME):	$(PUSH) $(OBJS) Makefile
+all:		push_swap $(NAME)
+
+$(NAME):	$(PUSH) $(LIBFT) $(OBJS)
 			$(CC) $(CFLAGS) $(OBJS) $(PUSH_SWAP) $(LIBFT) -o $(NAME)
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(LIBS) Makefile
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c Makefile
 			$(CC) $(CFLAGS) -c $< -o $@
 
-$(PUSH):
-			make -C ../
+push_swap:
+			make library -C ../
 
 clean:
 			$(RM) $(OBJS)
@@ -43,9 +45,7 @@ clean:
 fclean:		clean	
 			$(RM) $(NAME)
 
-re:			fclean $(NAME)
+re:			fclean all
 
 normi:		
 			$(NORM)	$(SRCS_FILES)
-
-.PHONY:		all clean fclean re normi
